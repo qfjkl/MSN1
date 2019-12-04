@@ -212,7 +212,7 @@ export class CompositionDynamique{
           break;
 
           case "ble":
-            // this.quantites_ingredient.ble=qte_ing(this.ing_nut_val.nutriments_BLE().matiere_proteine_brute);
+            this.quantites_ingredient.ble=qte_ing(this.ing_nut_val.nutriments_BLE().matiere_proteine_brute);
           break
           
           case "farine_de_sang":
@@ -275,14 +275,6 @@ export class CompositionDynamique{
            	case "farine_de_poisson":
            			this.quantites_ingredient.farine_de_poisson=qte_ing(this.ing_nut_val.nutriments_FARINE_DE_POISSON().matiere_seche); 
            	break;
-
-           	// case "lysine":
-           	// 		this.quantites_ingredient.lysine=qte_ing(this.ing_nut_val.nutriments_LYSINE().matiere_seche); 
-           	// break;
-
-           	// case "methionine":
-           	// 		this.quantites_ingredient.methionine=qte_ing(this.ing_nut_val.nutriments_ME().matiere_seche); 
-           	// break;	
 
            	case "patate":
            			this.quantites_ingredient.patate=qte_ing(this.ing_nut_val.nutriments_PATATE().matiere_seche); 
@@ -575,7 +567,7 @@ export class CompositionDynamique{
       					break;
       					
       					case "ble":
-      						// this.quantites_ingredient.ble=qte_ing(this.ing_nut_val.nutriments_BLE().energie_metabolisable);
+      						this.quantites_ingredient.ble=qte_ing(this.ing_nut_val.nutriments_BLE().energie_metabolisable);
       					break;
       					
       					case "farine_de_sang":
@@ -627,7 +619,7 @@ export class CompositionDynamique{
       					break;
 
       					case "son_de_ble":
-      						// this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_soj().extratif_non_azote);
+      						this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_SON_BLE().extratif_non_azote);
       					break;
 
       					case "tourteaux_de_palmiste":
@@ -716,7 +708,6 @@ export class CompositionDynamique{
       				switch(ingredient){
       					case "mais":
       						this.quantites_ingredient.mais=qte_ing(this.ing_nut_val.nutriments_MAIS().amidon); 
-      						console.log(this.quantites_ingredient.mais);
       					break;
       					
       					case "tourteau_de_coton":
@@ -752,7 +743,7 @@ export class CompositionDynamique{
       					break;
 
       					case "son_de_ble":
-      						// this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_soj().amidon);
+      						this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_SON_BLE().amidon);
       					break;
 
       					case "tourteaux_de_palmiste":
@@ -760,7 +751,7 @@ export class CompositionDynamique{
       					break;
       					
       					case "huile_de_palme":
-      						// this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_().amidon);
+      						this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_HUILE_VEGETALE().amidon);
       					break;
       					
       					case "farine_de_poisson":
@@ -842,7 +833,6 @@ export class CompositionDynamique{
       				switch(ingredient){
       					case "mais":
       						this.quantites_ingredient.mais=qte_ing(this.ing_nut_val.nutriments_MAIS().sucre); 
-      						console.log(this.quantites_ingredient.mais);
       					break;
       					
       					case "tourteau_de_coton":
@@ -878,7 +868,7 @@ export class CompositionDynamique{
       					break;
 
       					case "son_de_ble":
-      						// this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_soj().sucre);
+      						this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_SON_BLE().sucre);
       					break;
 
       					case "tourteaux_de_palmiste":
@@ -886,7 +876,7 @@ export class CompositionDynamique{
       					break;
       					
       					case "huile_de_palme":
-      						// this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_().sucre);
+      						this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_HUILE_VEGETALE().sucre);
       					break;
       					
       					case "farine_de_poisson":
@@ -1002,7 +992,7 @@ export class CompositionDynamique{
       					break;
 
       					case "son_de_ble":
-      						// this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_soj().matiere_grasse);
+      						this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_SON_BLE().matiere_grasse);
       					break;
 
       					case "tourteaux_de_palmiste":
@@ -1010,7 +1000,7 @@ export class CompositionDynamique{
       					break;
       					
       					case "huile_de_palme":
-      						// this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_().matiere_grasse);
+      						this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_HUILE_VEGETALE().matiere_grasse);
       					break;
       					
       					case "farine_de_poisson":
@@ -1126,7 +1116,7 @@ export class CompositionDynamique{
       					break;
 
       					case "son_de_ble":
-      						// this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_soj().cellulose_brute);
+      						this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_SON_BLE().cellulose_brute);
       					break;
 
       					case "tourteaux_de_palmiste":
@@ -1134,7 +1124,7 @@ export class CompositionDynamique{
       					break;
       					
       					case "huile_de_palme":
-      						// this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_().cellulose_brute);
+      						this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_HUILE_VEGETALE().cellulose_brute);
       					break;
       					
       					case "farine_de_poisson":
@@ -1250,7 +1240,7 @@ export class CompositionDynamique{
       					break;
 
       					case "son_de_ble":
-      						// this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_soj().lysine);
+      						this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_SON_BLE().lysine);
       					break;
 
       					case "tourteaux_de_palmiste":
@@ -1258,7 +1248,7 @@ export class CompositionDynamique{
       					break;
       					
       					case "huile_de_palme":
-      						// this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_().lysine);
+      						this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_HUILE_VEGETALE().lysine);
       					break;
       					
       					case "farine_de_poisson":
@@ -1374,7 +1364,7 @@ export class CompositionDynamique{
       					break;
 
       					case "son_de_ble":
-      						// this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_soj().methionine);
+      						this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_SON_BLE().methionine);
       					break;
 
       					case "tourteaux_de_palmiste":
@@ -1382,7 +1372,7 @@ export class CompositionDynamique{
       					break;
       					
       					case "huile_de_palme":
-      						// this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_().methionine);
+      						this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_HUILE_VEGETALE().methionine);
       					break;
       					
       					case "farine_de_poisson":
@@ -1461,7 +1451,6 @@ export class CompositionDynamique{
       				switch(ingredient){
       					case "mais":
       						this.quantites_ingredient.mais=qte_ing(this.ing_nut_val.nutriments_MAIS().tryp); 
-      						console.log(this.quantites_ingredient.mais);
       					break;
       					
       					case "tourteau_de_coton":
@@ -1497,7 +1486,7 @@ export class CompositionDynamique{
       					break;
 
       					case "son_de_ble":
-      						// this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_soj().tryp);
+      						this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_SON_BLE().tryp);
       					break;
 
       					case "tourteaux_de_palmiste":
@@ -1505,7 +1494,7 @@ export class CompositionDynamique{
       					break;
       					
       					case "huile_de_palme":
-      						// this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_().tryp);
+      						this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_HUILE_VEGETALE().tryp);
       					break;
       					
       					case "farine_de_poisson":
@@ -1619,7 +1608,7 @@ export class CompositionDynamique{
       					break;
 
       					case "son_de_ble":
-      						// this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_soj().trheo);
+      						this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_SON_BLE().trheo);
       					break;
 
       					case "tourteaux_de_palmiste":
@@ -1627,7 +1616,7 @@ export class CompositionDynamique{
       					break;
       					
       					case "huile_de_palme":
-      						// this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_().trheo);
+      						this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_HUILE_VEGETALE().trheo);
       					break;
       					
       					case "farine_de_poisson":
@@ -1741,7 +1730,7 @@ export class CompositionDynamique{
       					break;
 
       					case "son_de_ble":
-      						// this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_soj().calcium);
+      						this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_SON_BLE().calcium);
       					break;
 
       					case "tourteaux_de_palmiste":
@@ -1749,7 +1738,7 @@ export class CompositionDynamique{
       					break;
       					
       					case "huile_de_palme":
-      						// this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_().calcium);
+      						this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_HUILE_VEGETALE().calcium);
       					break;
       					
       					case "farine_de_poisson":
@@ -1863,7 +1852,7 @@ export class CompositionDynamique{
       					break;
 
       					case "son_de_ble":
-      						// this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_soj().phosphore_assimiliable);
+      						this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_SON_BLE().phosphore_assimiliable);
       					break;
 
       					case "tourteaux_de_palmiste":
@@ -1871,7 +1860,7 @@ export class CompositionDynamique{
       					break;
       					
       					case "huile_de_palme":
-      						// this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_().phosphore_assimiliable);
+      						this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_HUILE_VEGETALE().phosphore_assimiliable);
       					break;
       					
       					case "farine_de_poisson":
@@ -1985,7 +1974,7 @@ export class CompositionDynamique{
       					break;
 
       					case "son_de_ble":
-      						// this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_soj().taux_d_incorporation);
+      						this.quantites_ingredient.soja_grille=qte_ing(this.ing_nut_val.nutriments_SON_BLE().taux_d_incorporation);
       					break;
 
       					case "tourteaux_de_palmiste":
@@ -1993,7 +1982,7 @@ export class CompositionDynamique{
       					break;
       					
       					case "huile_de_palme":
-      						// this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_().taux_d_incorporation);
+      						this.quantites_ingredient.huile_de_palme=qte_ing(this.ing_nut_val.nutriments_HUILE_VEGETALE().taux_d_incorporation);
       					break;
       					
       					case "farine_de_poisson":

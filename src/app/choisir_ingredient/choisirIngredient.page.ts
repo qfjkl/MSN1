@@ -25,8 +25,6 @@ tourteaux_de_palmiste:boolean;
 huile_de_palme:boolean;
 farine_de_poisson:boolean;
 farine_de_sang:boolean;
-lysine:boolean;
-methionine:boolean;
 patate:boolean;
 graisse_animale:boolean;
 huile_vegetale:boolean;
@@ -63,8 +61,6 @@ ingredients=[
   "Huile de palme",
   "Farine de poisson",
   "Farine de sang",
-  "Lysine",
-  "Méthionine",
   "Patate",
   "Graisse animale",
   "Huile végétale",

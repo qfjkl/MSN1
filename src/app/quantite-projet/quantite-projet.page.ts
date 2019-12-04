@@ -31,7 +31,6 @@ export class QuantiteProjetPage implements OnInit {
   public tourteaux_de_palmiste:boolean=false;
   public huile_de_palme:boolean=false;
   public farine_de_poisson:boolean=false;
-  public lysine:boolean=false;
   public methionine:boolean=false;
   public patate:boolean=false;
   public graisse_animale:boolean=false;
@@ -62,8 +61,6 @@ export class QuantiteProjetPage implements OnInit {
   public qte_tourteaux_de_palmiste_val:number;
   public qte_huile_de_palme_val:number;
   public qte_farine_de_poisson_val:number;
-  public qte_lysine_val:number;
-  public qte_methionine_val:number;
   public patate_val:number;
   public ge_animale_val:number;
   public huile_vegetale_val:number;
@@ -102,8 +99,6 @@ export class QuantiteProjetPage implements OnInit {
    tourteaux_de_palmiste:null,
    huile_de_palme:null,
    farine_de_poisson:null,
-   lysine:null,
-   methionine:null,
    patate:null,
    graisse_animale:null,
    huile_vegetale:null,
@@ -134,8 +129,6 @@ export class QuantiteProjetPage implements OnInit {
    "Huile de palme",
    "Farine de poisson",
    "Farine de sang",
-   "Lysine",
-   "Méthionine",
    "Patate",
    "Graisse animale",
    "Huile végétale",
@@ -226,11 +219,7 @@ export class QuantiteProjetPage implements OnInit {
             case "farine_de_poisson":
             this.farine_de_poisson=true;
             break;
-    
-            case "lysine":
-            this.lysine=true;
-            break;
-    
+  
             case "methionine":
             this.methionine=true;
             break;
