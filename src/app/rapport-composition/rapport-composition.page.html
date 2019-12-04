@@ -54,11 +54,19 @@
             <strong class="rendu-final">Quantité total d'aliment : </strong>{{qteTotalAliment}} KG
         </ion-item>  
         <ion-item ion-button (click)="posologie()">
-          <strong class="rendu-final">Posologie nutritionnel</strong>
+          <ion-label><strong class="rendu-final">Posologie nutritionnel : </strong></ion-label>
+          <div *ngIf="pharseProjet=='Démarrage'">
+            <ion-label>poulet du 1<sup>er</sup>- 7<sup>ème</sup> jour: 20g  </ion-label>
+            <ion-label>poulet du 7<sup>ème</sup>- 14<sup>ème</sup> jour: 40g </ion-label>
+            <ion-label>poulet du 14<sup>ème</sup>- 21<sup>ème</sup> jour: 80g </ion-label>
+          </div>
+          
+          <ion-label *ngIf="pharseProjet=='Croissance'">poulet du 21<sup>ème</sup>- 28<sup>ème</sup> jour: 120g </ion-label>  
+          <ion-label *ngIf="pharseProjet=='Finition'">poulet du 28<sup>ème</sup>- 35<sup>ème</sup> jour: 150g </ion-label>
+          <ion-label *ngIf="pharseProjet=='Finition'">poulet du 35<sup>ème</sup>- 45<sup>ème</sup> jour: 232g </ion-label>
+                
         </ion-item>
-        <div *ngIf="posologi">
-          <strong class="rendu-final">posologie à suivre</strong>
-        </div>  
+          
         <ion-item ion-button>
           <strong class="rendu-final"> Extimation</strong>
         </ion-item>  
