@@ -1,0 +1,84 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-10>
+             Projet
+            </ion-col>
+
+          </ion-row>
+        </ion-grid>
+      </ion-title>
+    </ion-toolbar>
+  
+    <ion-segment color="white" [(ngModel)]="pet">
+      <ion-segment-button value="Rapport">
+        <ion-icon name="folder-open"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="Suivie">
+          <ion-icon name="pulse"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="Finance">
+          <ion-icon name="gift"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="Personnel">
+          <ion-icon name="contacts"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-header>
+  
+  <ion-content>
+  
+  <div [ngSwitch]="pet" class="page-projet">
+    <div *ngSwitchCase="'Suivie'">
+      <h3>Suivie technique</h3>
+        <ion-list class="content">
+          <ion-item class="button-rapport" ion-button (click)="alimentation()">Alimentation</ion-item>
+          <ion-item class="button-rapport" ion-button (click)="mortalite()">Enregistrer une mortalité</ion-item>
+          <ion-item class="button-rapport" ion-button (click)="diagnostique()">Diagnostique intélligent</ion-item>
+          <ion-item class="button-rapport" ion-button (click)="conseilSuivie()">Conseil</ion-item>
+        </ion-list>
+    </div>
+  
+    <div *ngSwitchCase="'Rapport'" class="rapport">
+      <h3 color="secondary">Rapport projet</h3>
+        <ion-list class="content">
+          <ion-item class="button-rapport" ion-button (click)="rapportNutrition()">Nutrition</ion-item>
+          <ion-item class="button-rapport" ion-button (click)="rapportSanteProjet()">Santé du projet</ion-item>
+          <ion-item class="button-rapport" ion-button (click)="rapportBilanFinancier()">Bilan financier</ion-item>
+          <ion-item class="button-rapport" ion-button (click)="rapportPersonnel()">Personnel</ion-item>
+        </ion-list>
+    </div>
+  
+    <div *ngSwitchCase="'Finance'">
+      <h3>Aspet financier</h3>
+      <ion-list class="content">
+        <ion-item class="button-rapport" ion-button (click)="depense()">Enregistrer une dépenses</ion-item>
+        <ion-item class="button-rapport" ion-button (click)="vente()">Enregistrer une Ventes</ion-item>
+  <!--       <button color="primary" class="button-rapport" ion-item (click)="bilanFinancier()">Consulter le Bilan</button> -->
+      </ion-list>
+    </div>
+  
+    <div *ngSwitchCase="'Personnel'">
+      <h3>Personnel</h3>
+      <ion-list>
+        <ion-item ion-button  (click)="ouvrirPersonnel()">Jeams Agent comptable</ion-item>
+        <ion-item ion-button (click)="ouvrirPersonnel()">Jordane Agent comptable</ion-item>
+        <ion-item ion-button (click)="ouvrirPersonnel()">Jordane Techniciens vétérinaire</ion-item>
+      </ion-list>
+      <ion-fab vertical="center" horizontal="end" slot="fixed">
+        <ion-fab-button color="secondary" (click)="ajouterPersonnel()">
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab> 
+    </div>
+  
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button color="secondary" (click)="addProjet()">
+        <ion-icon name="settings"></ion-icon>
+      </ion-fab-button>
+  </ion-fab> 
+  </ion-content>
+  

@@ -1,0 +1,158 @@
+<ion-header>
+  <ion-toolbar color="primary"><p align="center" class="name-app">MSNUTRITION</p></ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <!-- <ion-icon name="menu" color="light" (click)="openEnd()"></ion-icon> -->
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-icon class='icon-acount' color="light" name="contacts" *ngIf="categorieUser!='Client'"></ion-icon>
+    <ion-icon class='icon-acount' color="light" name="mail" *ngIf="categorieUser!='Client'"></ion-icon>
+  	<ion-icon class='icon-acount' color="light" name="notifications" *ngIf="categorieUser!='Client'"></ion-icon>
+  	<ion-icon class='icon-acount' color="light" name="briefcase" *ngIf="categorieUser!='Client'"></ion-icon>
+  	<ion-icon name="search" class='icon-acount' color="light" *ngIf="categorieUser!='Client'"></ion-icon>
+  	<ion-icon class='icon-acount' color="light" name="contact" *ngIf="categorieUser!='Client'"></ion-icon>  
+    <ion-icon class='icon-acount' color="light" name="notifications" *ngIf="categorieUser=='Client'"></ion-icon>
+    <ion-icon name="search" class='icon-acount' color="light" *ngIf="categorieUser=='Client'"></ion-icon>
+    <ion-icon class='icon-acount' color="light" name="contact" *ngIf="categorieUser=='Client'"></ion-icon>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+<!--     Bienvenue dans Msnutrition, nous vous remercions de nous avoir choisir pour mener à bien vos projets d'élévage. Votre réussite est notre but principal car notre réussite dépend de la votre. A présent ne perdez plus de temps,
+    lençez vous en commençant par créer un projet. -->
+    <!-- <div class="content-button-account"> -->
+	  	
+<div *ngIf="categorieUser!='Client'">      
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <ion-button class="button" color="primary" routerLink="projet" routerDirection='forward'>
+          <div class="content">
+            <ion-icon class="icon-card" name="briefcase" color="light"></ion-icon>
+          </div>
+        </ion-button>
+      </ion-col>
+      <ion-col col-6>
+        <ion-button class="button" color="primary" routerLink="archive/">
+          <div class="content">
+            <ion-icon name="filing" class="icon-card" color="light"></ion-icon></div>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <ion-button class="button" color="primary" routerLink="diagnostique-intelligent">
+          <div class="content"><ion-icon name="medkit" class="icon-card" color="light"></ion-icon></div>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button class="button" color="primary" routerLink="boutique">
+          <div class="content"><ion-icon class="icon-card" name="cart"></ion-icon></div>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6 class="button-alimentation">
+        <ion-button class="button" color="primary" routerLink="choisirIngredient">
+          <div class="content">
+            <ion-icon class="icon-card" name="egg"></ion-icon>
+          </div>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <ion-button class="button" color="primary" routerLink="about/">
+          <div class="content">
+            <ion-icon class="icon-card" name="information-circle"></ion-icon>
+          </div>
+        </ion-button>
+      </ion-col>
+      <ion-col col-6>
+        <ion-button class="button" color="primary" routerLink="aide/">
+          <div class="content">
+            <ion-icon name="help-circle" class="icon-card" color="light"></ion-icon>
+          </div>
+        </ion-button>
+      </ion-col>
+    </ion-row>  
+  </ion-grid>
+
+</div>
+	  	<!-- <ion-button round><ion-icon name="help-circle"></ion-icon></ion-button>    	 -->
+    <!-- </div> -->
+<!--   <div>
+
+</div>
+ -->
+<div *ngIf="categorieUser=='Client'">
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-grid>
+      <ion-row>
+        <ion-col col-6>
+          <ion-button class="button" color="primary">
+            <div class="content">
+                <img [src]="imgPoulet" height="80">
+            </div>
+          </ion-button>
+        </ion-col>
+        <ion-col col-6>
+          <ion-button class="button" color="primary">
+            <div class="content">
+                <img [src]="imgPoulet" height="80">
+            </div>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>
+          <ion-button class="button" color="primary">
+            <div class="content">
+                <img [src]="imgPoulet" height="80">
+            </div>
+          </ion-button>
+        </ion-col>
+        <ion-col col-6>
+          <ion-button class="button" color="primary">
+            <div class="content">
+                <img [src]="imgPoulet" height="80">
+            </div>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>
+          <ion-button class="button" color="primary">
+            <div class="content">
+                <img [src]="imgPoulet" height="80">
+            </div>
+          </ion-button>
+        </ion-col>
+        <ion-col col-6>
+          <ion-button class="button" color="primary">
+            <div class="content">
+                <img [src]="imgPoulet" height="80">
+            </div>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>
+          <ion-button class="button" color="primary">
+            <div class="content">
+                <img [src]="imgPoulet" height="80">
+            </div>
+          </ion-button>
+        </ion-col>
+        <ion-col col-6>
+          <ion-button class="button" color="primary">
+            <div class="content">
+                <img [src]="imgPoulet" height="80">
+            </div>
+          </ion-button>
+        </ion-col>
+      </ion-row>  
+    </ion-grid>        
+  </div>
+</ion-content>

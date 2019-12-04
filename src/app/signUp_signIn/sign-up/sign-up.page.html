@@ -1,0 +1,45 @@
+<ion-content>
+  <div>
+    <ion-icon [name]="icon" class='icon icon-user'></ion-icon>  
+  </div>
+
+  <div *ngIf="bool" class="content-error" color='danger'>
+    <h5>Erreur :</h5>
+    <div *ngFor="let error of msgErreur">
+      <li>{{error}}</li>
+    </div>
+
+  </div>
+  <ion-list>
+
+    <ion-item *ngIf="categorie=='Entreprise'">
+      <ion-label position="floating" >Nom de l'entreprise</ion-label>
+      <ion-input type="text" [(ngModel)]="val_inscription.nom_entreprise" autofocus="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >Nom</ion-label>
+      <ion-input type="text" [(ngModel)]="val_inscription.nom" autofocus="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Login (Prénom)</ion-label>
+      <ion-input type="text" [(ngModel)]="val_inscription.login"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" [(ngModel)]="val_inscription.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Téléphone</ion-label>
+      <ion-input type="number" [(ngModel)]="val_inscription.tel"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Mot de passe</ion-label>
+      <ion-input type="password" [(ngModel)]="val_inscription.pwd"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Confirmer mot de passe</ion-label>
+      <ion-input type="password" [(ngModel)]="val_inscription.confimpwd"></ion-input>
+    </ion-item>
+    <ion-button type="submit" shape="block" color="primary" (click)="inscription()">inscription</ion-button>
+  </ion-list>
+</ion-content>

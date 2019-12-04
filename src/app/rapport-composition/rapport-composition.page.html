@@ -1,0 +1,72 @@
+<ion-header >
+  <ion-toolbar color="primary" no-border-bottom>
+    <ion-title  class="ion-text-center">rapport de la composition</ion-title>
+  </ion-toolbar>
+  <ion-toolbar no-border-top>
+  	<ion-segment [(ngModel)]="pet">
+  		<ion-segment-button value="ingredient">
+  			INGREDIENT
+  		</ion-segment-button>
+  		<ion-segment-button value="nutriment">
+  			NUTRIMENT
+  		</ion-segment-button>
+   		<ion-segment-button value="rendu_final">
+  			RENDU FINAL
+  		</ion-segment-button>
+  	</ion-segment>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+
+	<div [ngSwitch]="pet">
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" *ngIf="pet=='ingredient'">
+      <ion-fab-button (click)="addIngredient()">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>    
+		<ion-list *ngSwitchCase="'ingredient'">
+      <div *ngFor="let ingSelectionne of ingredients_selectionnes">
+        <div *ngFor="let ing of data_ingredient; let index= index;">
+          <div *ngIf="ing.ing==ingSelectionne">
+              <ion-label color="primary">{{ing.ingredient}} en KG</ion-label>
+              <ion-input type="number" [(ngModel)]="ing.qte_ing" (keyup)="changeQteIng(index, ing.ingredient, ing.qte_ing)"></ion-input>
+          </div>
+        </div>
+      </div>  
+    </ion-list>
+
+		<ion-list *ngSwitchCase="'nutriment'">
+			<div *ngFor="let nut of data_nutriment">
+				<ion-label color="primary">{{nut.nutriment}} en pourcentage </ion-label>
+        <ion-input type="number" [(ngModel)]="nut.qte_nutriment" (keyup)="changeQteNut(nut.nutAlgo,nut.qte_nutriment)"></ion-input>
+      </div>
+		</ion-list>
+    <div *ngSwitchCase="'rendu_final'">
+      <!-- <ion-item></ion-item> -->
+      <ion-list>
+        <ion-item>
+          <strong class="rendu-final">Type d'aliment : </strong>  {{pharseProjet}}
+        </ion-item>
+        <ion-item ion-button>
+          <strong class="rendu-final">Nombre de Sujets : </strong> {{nbre_sujet}}
+        </ion-item>
+        <ion-item ion-button>
+            <strong class="rendu-final">Quantité total d'aliment : </strong>{{qteTotalAliment}} KG
+        </ion-item>  
+        <ion-item ion-button (click)="posologie()">
+          <strong class="rendu-final">Posologie nutritionnel</strong>
+        </ion-item>
+        <div *ngIf="posologi">
+          <strong class="rendu-final">posologie à suivre</strong>
+        </div>  
+        <ion-item ion-button>
+          <strong class="rendu-final"> Extimation</strong>
+        </ion-item>  
+        <ion-item ion-button>
+          <strong class="rendu-final"> Durée de l'aliment: </strong>
+        </ion-item>
+        <ion-item ion-button>{{dureComposition}} soit en moyenne {{qteConsommerParPharse}} grammes d'aliment ingerée par un poulet.</ion-item>  
+      </ion-list>
+    </div>
+	</div>
+</ion-content>

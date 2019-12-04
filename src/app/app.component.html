@@ -1,0 +1,27 @@
+  <ion-menu side="start" menuId="first" contentId="content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title class="ion-text-center profile">
+          <p>Mode gratuit</p>				
+          <ion-icon name="md-contact" class='icon icon-user' *ngIf="categorieUser!='Entreprise'"></ion-icon>
+          <ion-icon name="planet" class='icon icon-user' *ngIf="categorieUser=='Entreprise'"></ion-icon>
+          <h5>{{user}}</h5>
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content id="content-menu">
+        <ion-list>
+          <ion-menu-toggle>
+              <ion-item ion-button class="button-menu" *ngFor="let p of pages"
+              [routerLink]="p.url" routerDirection="forward">
+               <ion-icon [name]="p.icon" color="primary"></ion-icon>            
+               {{p.title}}   		
+             </ion-item>
+          </ion-menu-toggle>  
+        </ion-list>			
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="content" main></ion-router-outlet>
+
+
+

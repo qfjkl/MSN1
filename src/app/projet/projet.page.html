@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Mes projets</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>  
+    <ion-list>
+      <ion-item ion-button class="projet" *ngFor='let projet of projets' (click)="loadProject(projet)">
+        <ion-icon name="folder-open" color="ionicPrimary"></ion-icon>&nbsp; {{ projet.nomProjet }}</ion-item>
+    </ion-list>
+<!--   
+    <ion-fab right bottom>
+      <button ion-fab color="ionicPrimary" (click)="addProject()"><ion-icon name="add"></ion-icon></button>
+    </ion-fab> -->
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button color="primary" (click)="addProjet()">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>  
+  </ion-content>

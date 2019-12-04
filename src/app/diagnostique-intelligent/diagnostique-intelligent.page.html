@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Effectuer un diagnostique</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="padding">
+<ion-card>
+	<ion-card-header color="primary">Récupération et analyse d'une image</ion-card-header>
+		<ion-card-content>
+			<ion-button color="primary" (click)="takePhoto()"><ion-icon name="camera"></ion-icon></ion-button>
+			<ion-button color="primary" (click)="cropImage()"><ion-icon name="folder-open"></ion-icon></ion-button>
+			<p align="center"><img [src]="myphoto"></p>
+			<ion-button *ngIf="myphoto!=Null" (click)="diagnostiquer()">Diagnostiquer</ion-button>
+			<p *ngIf="diagnostique!=''">
+				{{diagnostique}}	
+			</p>
+
+		</ion-card-content>
+	</ion-card>
+</ion-content>

@@ -1,0 +1,29 @@
+ion-toolbar{	
+	height: 100%;
+	/*background: #26A9AF;  */
+}
+.profile{
+	padding: 1%;
+}
+.icon-user{
+	/*width: 20%;*/
+	color: white;
+	font-size: 80px;
+	font-weight: bold;
+}
+/*.content-menu{
+	margin-top: 2%; 
+	color: blue;
+}*/
+.button-menu,#content-menu{
+	color: #26a8cf !important;	
+	/*background: #eee !important;*/
+	font-family: arial;
+	font-weight: bold;
+	/*opacity: 0.4 black !important;*/
+
+}
+
+ion-list{
+	padding: 4% !important;
+}

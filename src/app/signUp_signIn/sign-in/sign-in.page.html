@@ -1,0 +1,24 @@
+
+<ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Connexion</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="padding" *ngIf="categorie!='Entreprise' || isValidNameEntreprise==true">
+            {{categories}}
+          <div>
+              <ion-icon [name]="icon" class="icon-user"></ion-icon>
+          </div>
+          <ion-list>
+              <ion-item>
+                  <ion-label position="floating">Login</ion-label>
+                  <ion-input type="text" [(ngModel)]="formData.nom" autofocus></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label position="floating">Mot de passe</ion-label>
+                  <ion-input type="password" [(ngModel)]="formData.password"></ion-input>
+              </ion-item>
+              <ion-button type="submit" shape="block" (click)="signIn()">Connexion</ion-button>
+          </ion-list>
+      </ion-content>
+      

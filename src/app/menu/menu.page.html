@@ -1,0 +1,36 @@
+<ion-menu side="start" menuId="first" contentId="content">
+	<ion-header>
+		<ion-toolbar color="primary">
+			<ion-title class='profile' text-center>
+				<p>Mode gratuit</p>				
+				<ion-icon name="md-contact" class='icon icon-user' *ngIf="categorieUser!='Entreprise'"></ion-icon>
+				<ion-icon name="planet" class='icon icon-user' *ngIf="categorieUser=='Entreprise'"></ion-icon>
+				<h5>{{user}}</h5>
+			</ion-title>
+		</ion-toolbar>
+	</ion-header>
+
+	<ion-content id="content-menu">
+		<div>
+			<ion-list>				
+				<button class="button-menu" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+					 <ion-icon name="briefcase" *ngIf="p.title=='Projet'"></ion-icon><ion-icon name="settings" *ngIf="p.title=='Paramètre'"></ion-icon>
+					 <ion-icon name="information-circle" *ngIf="p.title=='A propos'"></ion-icon>
+					 <ion-icon name="people" *ngIf="p.title=='Gestion du personnel'"></ion-icon>
+					 <ion-icon name="log-out" *ngIf="p.title=='Déconnexion'"></ion-icon>
+					 <ion-icon name="cart" *ngIf="p.title=='Composer un aliment'"></ion-icon>
+					 <ion-icon name="ribbon" *ngIf="p.title=='Abonement'"></ion-icon><ion-icon name="help-circle" *ngIf="p.title=='Aide'"></ion-icon><ion-icon name="albums" *ngIf="p.title=='Rapport du personnel'"></ion-icon>
+					<ion-icon name="medkit" *ngIf="p.title=='Effectuer un Diagnostique'"></ion-icon>
+					<ion-icon name="filing" *ngIf="p.title=='Archive'"></ion-icon>
+					<ion-icon name="chatbubbles" *ngIf="p.title=='Effectuer une suggestion'"></ion-icon>
+					<ion-icon name="unlock" *ngIf="p.title=='Mode premium'"></ion-icon><ion-icon name="md-contact" *ngIf="p.title=='Profil'"></ion-icon>
+					<ion-icon *ngIf="p.title=='Effectuer un achat'" name="cart"></ion-icon><ion-icon *ngIf="p.title=='Alimentation'" name="egg"></ion-icon>
+					<!--<ion-icon name="camera"></ion-icon><ion-icon name="arrow-round-back"></ion-icon><ion-icon name="close-circle"></ion-icon><ion-icon name="trash"></ion-icon>-->
+										  {{p.title}}   		
+				</button>  
+			</ion-list>			
+		</div>
+	</ion-content>
+
+</ion-menu>
+<ion-router-outlet id="content"></ion-router-outlet>

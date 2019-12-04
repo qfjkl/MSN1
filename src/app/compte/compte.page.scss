@@ -1,0 +1,79 @@
+.welcome{
+    /*background: #26a9Af;*/
+    color: #26a9df;
+    padding:10%;
+    margin-top: 15%;
+    border: 3px solid #26a9df;
+    border-radius: 4px 4px 4px 4px;
+    text-shadow: 2px 2px 2px gray;
+    box-shadow: 2px 2px 2px 3px gray;
+}
+.button1{
+    margin-left: 16%;
+}
+.logo{
+  padding: 12%;
+  border-radius: 50%;
+}
+ion-title{
+    padding-left: 25%;
+}
+.icon-acount{
+    padding-left: 8%;
+    font-size: 19px; 
+}
+.content-button-account{
+    padding-top: 2%; 
+}
+.name-app{
+    /*padding-top: 2%;*/
+    margin-top: 10%;
+    margin-left: 25%;
+    padding: 2%;
+    opacity: 0.4 white;
+    border-radius: 15px 15px 15px 15px;
+    background: #eee;
+    width: 50%;
+    color:#26A9AF;
+    text-shadow: 1px 1px 1px gray;
+    font-size: 19px;
+    font-weight: bold;
+}
+ion-card{
+    margin-top: 5%;
+}
+
+.button{
+    width: 90%;
+    height: auto;
+    padding: 5%;
+    // border: 2px solid #26a8cf;
+    /*background: white !important;*/
+}
+.content{
+    width: 100%;
+    padding: 10%;
+}
+.icon-card{
+    font-size: 30px;
+}
+ion-grid{
+    margin-top: 10% !important;
+}
+ion-col{
+    width: 100%;
+}
+img{
+    border-radius: 50%;
+    width: 100%;
+}
+.start_menu{
+    width: auto;
+    list-style: none !important;
+    background: white;
+}
+.button-alimentation ion-button{
+    margin-left: 25%;
+    width: 50%;
+}
+

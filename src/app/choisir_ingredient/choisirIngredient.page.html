@@ -1,0 +1,133 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Choix des ingrédients</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="padding">
+	<ion-card>
+		<ion-card-header>Notification</ion-card-header>
+		<ion-card-content>Vous allez commencez la composition d'un aliment {{pharse}} pour {{nbrpoulet}} poulet(s).
+		</ion-card-content>
+	</ion-card>
+	<ion-item>
+		<ion-label>{{ingredients[0]}}</ion-label>
+		<ion-checkbox [(ngModel)]="mais" (ionChange)="val_mais()"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+		<ion-label>{{ingredients[1]}}</ion-label>
+		<ion-checkbox  [(ngModel)]="tourteau_de_coton" (ionChange)="val_tourteaux_de_coton()"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+		<ion-label>{{ingredients[2]}}</ion-label>
+		<ion-checkbox [(ngModel)]="tourteaux_de_soja" (ionChange)="val_tourteaux_de_soja()"></ion-checkbox>
+	</ion-item>
+<!-- 	<ion-item>
+		<ion-label>{{ingredients[3]}} en Kg</ion-label>
+		<ion-checkbox [(ngModel)]="farine_d_os" (ionChange)="val_farine_d_os()"></ion-checkbox>
+	</ion-item> -->
+	<ion-item>
+		<ion-label>{{ingredients[4]}}</ion-label>
+		<ion-checkbox [(ngModel)]="tourteaux_d_arachide" (ionChange)="val_tourteaux_d_arrachide()"></ion-checkbox>
+	</ion-item>
+<!-- 	<ion-item>
+		<ion-label>{{ingredients[5]}}</ion-label>
+		<ion-checkbox [(ngModel)]="concentre_chair" (ionChange)="val_concentre_chair()"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+		<ion-label>{{ingredients[6]}}</ion-label>
+		<ion-checkbox [(ngModel)]="concentre" (ionChange)="val_concentre()"></ion-checkbox>
+	</ion-item> -->
+<!-- 	<ion-item>
+		<ion-label>{{ingredients[7]}}</ion-label>
+		<ion-checkbox [(ngModel)]="coque_de_cacao" (ionChange)="val_coque_cacao()"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+		<ion-label>{{ingredients[8]}}</ion-label>
+		<ion-checkbox [(ngModel)]="soja_grille" (ionChange)="val_soja_grille()"></ion-checkbox>
+	</ion-item> -->
+	<ion-item>
+		<ion-label>{{ingredients[9]}} en Kg</ion-label>
+		<ion-checkbox [(ngModel)]="son_de_ble" (ionChange)="val_son_ble()"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+		<ion-label>{{ingredients[10]}}</ion-label>
+		<ion-checkbox [(ngModel)]="tourteaux_de_palmiste" (ionChange)="val_tourteaux_de_palmiste()"></ion-checkbox>
+	</ion-item>
+<!-- 	<ion-item>
+		<ion-label> {{ingredients[11]}}</ion-label>
+		<ion-checkbox [(ngModel)]="huile_de_palme" (ionChange)="val_huile_de_palme()"></ion-checkbox>
+	</ion-item> -->
+<!-- 	<ion-item>
+		<ion-label>{{ingredients[12]}}</ion-label>
+		<ion-checkbox [(ngModel)]="farine_de_poisson" (ionChange)="val_farine_de_poison()"></ion-checkbox>
+	</ion-item> -->
+	<ion-item>
+		<ion-label>{{ingredients[13]}}</ion-label>
+		<ion-checkbox [(ngModel)]="farine_de_sang" (ionChange)="val_farine_de_sang()"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+		<ion-label>{{ingredients[14]}} en Kg</ion-label>
+		<ion-checkbox [(ngModel)]="lysine" (ionChange)="val_lysine()"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+		<ion-label>{{ingredients[15]}}</ion-label>
+		<ion-checkbox [(ngModel)]="methionine" (ionChange)="val_methionine()"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+		<ion-label>{{ingredients[16]}}</ion-label>
+		<ion-checkbox [(ngModel)]="patate" (ionChange)="val_patate()"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+		<ion-label>{{ingredients[17]}}</ion-label>
+		<ion-checkbox [(ngModel)]="graisse_animale" (ionChange)="val_graisse_animale()"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+		<ion-label>{{ingredients[18]}}</ion-label>
+		<ion-checkbox [(ngModel)]="huile_vegetale" (ionChange)="val_huile_vegetale()"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+		<ion-label>{{ingredients[19]}}</ion-label>
+		<ion-checkbox [(ngModel)]="manioc" (ionChange)="val_manioc()"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+		<ion-label>{{ingredients[20]}}</ion-label>
+		<ion-checkbox [(ngModel)]="dreche" (ionChange)="val_dreche()"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+		<ion-label>{{ingredients[21]}}</ion-label>
+		<ion-checkbox [(ngModel)]="banane" (ionChange)="val_banane()"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+		<ion-label>{{ingredients[22]}}</ion-label>
+		<ion-checkbox [(ngModel)]="coquille" (ionChange)="val_coquille"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+		<ion-label>{{ingredients[23]}}</ion-label>
+		<ion-checkbox [(ngModel)]="son_de_riz" (ionChange)="val_son_de_riz()"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+		<ion-label>{{ingredients[24]}}</ion-label>
+		<ion-checkbox [(ngModel)]="tourteaux_de_copra" (ionChange)="val_tourteaux_de_copra()"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+		<ion-label>{{ingredients[25]}}</ion-label>
+		<ion-checkbox [(ngModel)]="millet" (ionChange)="val_millet()"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+		<ion-label>{{ingredients[26]}}</ion-label>
+		<ion-checkbox [(ngModel)]="sorgho" (ionChange)="val_sorgho()"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+		<ion-label>{{ingredients[27]}}</ion-label>
+		<ion-checkbox [(ngModel)]="remoulage" (ionChange)="val_remoulage()"></ion-checkbox>
+	</ion-item>
+	<!-- <ion-item>
+		<ion-label>{{ingredients[28]}}</ion-label>
+		<ion-checkbox [(ngModel)]="ble" (ionChange)="val_ble()"></ion-checkbox>
+	</ion-item> -->
+	<ion-item>
+        <ion-button  size="large" color="primary" (click)="choixComposition()">Continuer</ion-button>
+    </ion-item>
+</ion-content>
+

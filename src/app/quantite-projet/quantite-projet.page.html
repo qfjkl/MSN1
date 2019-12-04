@@ -1,0 +1,248 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title *ngIf="modeComposition=='manuel'">Mode Manuel</ion-title>
+    <ion-title *ngIf="modeComposition=='dynamique'">Mode dynamique</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <div *ngIf="modeComposition=='dynamique'">
+    <ion-item>
+      <ion-label position="floating">Choisir un nutriment</ion-label>
+      <ion-select [(ngModel)]="choice_nut">
+        <ion-select-option value="matiere_proteine_brute">Protéine</ion-select-option>
+        <ion-select-option value="matiere_seche">Matière Sèche</ion-select-option>
+        <ion-select-option value="energie_brute">Energie brute</ion-select-option>
+        <ion-select-option value="energie_metabolisable">Energie metabolisable</ion-select-option>
+        <ion-select-option value="extratif_non_azote">Extratif non azote</ion-select-option>
+        <ion-select-option value="amidon">Amidon</ion-select-option>
+        <ion-select-option value="sucre">Sucre</ion-select-option>
+        <ion-select-option value="matiere_grasse">Matière grasse</ion-select-option>
+        <ion-select-option value="cellulose_brute">Cellulose brute</ion-select-option>
+        <ion-select-option value="lysine">Lysine</ion-select-option>
+        <ion-select-option value="methionine">Méthionine</ion-select-option>
+        <ion-select-option value="tryp">Tryp</ion-select-option>
+        <ion-select-option value="trheo">Trheo</ion-select-option>
+        <ion-select-option value="calcium">calcium</ion-select-option>
+        <ion-select-option value="phosphore_assimiliable">Phosphore assimiliable</ion-select-option>
+        <ion-select-option value="taux_d_incorporation">Taux d'incorporation</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Entrez la Quantitée du nutriment</ion-label>
+      <ion-input type="number" [(ngModel)]="choice_nut_val"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-button size="large" (click)="compositionDynamique()">Composer</ion-button>
+    </ion-item>
+  </div>
+    <div *ngIf="modeComposition=='manuel'">
+        <!-- <ion-list> -->
+        <div *ngIf="mais==true">
+            <ion-item>
+              <ion-label position="floating">quantité Maïs.</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.mais" name="qte_mais">
+              </ion-input>
+            </ion-item>
+        </div>
+        <div *ngIf="tourteau_de_coton==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Tourteau de Coton.</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.tourteau_de_coton" name="tourteau_de_coton">
+              </ion-input>
+            </ion-item>
+        </div>
+        <div *ngIf="tourteaux_de_soja==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Tourteau de soja</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.tourteaux_de_soja" name="tourteaux_de_soja">
+              </ion-input>
+            </ion-item>
+        </div><!-- 
+        <div *ngIf="farine_d_os==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Farine d'Os</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.farine_d_os" placeholder="La Quantité De Farine D'os est de?" name="farine_d_os">
+              </ion-input>
+            </ion-item>
+        </div> -->
+        <div *ngIf="tourteaux_d_arachide==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Tourteau d'Arrachide</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.tourteaux_d_arachide" name="tourteaux_d_arachide">
+              </ion-input>
+            </ion-item>
+        </div><!-- 
+        <div *ngIf="concentre_chair==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Concentré de Chair</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.concentre_chair" name="concentre_chair">
+              </ion-input>
+            </ion-item>
+        </div> 
+        <div *ngIf="concentre==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Concentré</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.concentre" name="concentre">
+              </ion-input>
+            </ion-item>
+        </div>
+        <div *ngIf="coque_de_cacao==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Coque de Cacao</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.coque_de_cacao" name="coque_de_cacao">
+              </ion-input>
+            </ion-item>
+        </div>
+        <div *ngIf="soja_grille==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Soja grillé</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.soja_grille" name="soja_grille">
+              </ion-input>
+            </ion-item>
+        </div>-->
+        <div *ngIf="son_de_ble==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Son de Blé</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.son_de_ble" name="son_de_ble">
+              </ion-input>
+            </ion-item>
+        </div>
+        <div *ngIf="tourteaux_de_palmiste==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Tourteau de Palmiste</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.tourteaux_de_palmiste" name="tourteaux_de_palmiste">
+              </ion-input>
+            </ion-item>
+        </div><!-- 
+        <div *ngIf="huile_de_palme==true">
+            <ion-item>
+              <ion-label position="floating">quantitée d'Huile de Palme</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.huile_de_palme" name="huile_de_palme">
+              </ion-input>
+            </ion-item>
+        </div> --><!-- 
+        <div *ngIf="farine_de_poisson==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Farine de Poisson</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.farine_de_poisson" name="farine_de_poisson">
+              </ion-input>
+            </ion-item>
+        </div> -->
+        <div *ngIf="lysine==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Lysine</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.lysine"  name="lysine_val">
+              </ion-input>
+            </ion-item>
+        </div>
+        <div *ngIf="methionine==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Méthionine</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.methionine" name="methionine">
+              </ion-input>
+            </ion-item>
+        </div>
+        <div *ngIf="patate==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Patate</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.patate" name="patate">
+              </ion-input>
+            </ion-item>
+        </div>
+        <div *ngIf="graisse_animale==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Graisse animale</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.graisse_animale" name="graisse_animale">
+              </ion-input>
+            </ion-item>
+        </div>
+        <div *ngIf="huile_vegetale==true">
+            <ion-item>
+              <ion-label position="floating">quantitée d'Huile végétale</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.huile_vegetale" name="huile_vegetale">
+              </ion-input>
+            </ion-item>
+        </div>
+        <div *ngIf="manioc==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Manioc</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.manioc" name="manioc">
+              </ion-input>
+            </ion-item>
+        </div>
+        <div *ngIf="dreche==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Drèche</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.dreche" name="dreche">
+              </ion-input>
+            </ion-item>
+        </div>
+        <div *ngIf="banane==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Banane</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.banane" name="banane">
+              </ion-input>
+            </ion-item>
+        </div>
+        <div *ngIf="coquille==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Coquille</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.coquille" name="coquille">
+              </ion-input>
+            </ion-item>
+        </div>
+        <div *ngIf="son_de_riz==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Son de riz</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.son_de_riz" name="son_de_riz">
+              </ion-input>
+            </ion-item>
+        </div>
+        <div *ngIf="tourteaux_de_copra==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Tourteaux de copra</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.tourteaux_de_copra" name="tourteaux_de_copra">
+              </ion-input>
+            </ion-item>
+        </div>
+        <div *ngIf="millet==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Millet</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.millet" name="millet">
+              </ion-input>
+            </ion-item>
+        </div>
+        <div *ngIf="sorgho==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Sorgho</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.sorgho" name="sorgho">
+              </ion-input>
+            </ion-item>
+        </div>
+        <div *ngIf="remoulage==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Remoulage</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.remoulage" name="remoulage">
+              </ion-input>
+            </ion-item>
+        </div>
+        <div *ngIf="ble==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Ble</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.ble" name="ble">
+              </ion-input>
+            </ion-item>
+        </div>
+        <div *ngIf="farine_de_sang==true">
+            <ion-item>
+              <ion-label position="floating">quantitée de Farine de sang</ion-label>
+              <ion-input type="number" [(ngModel)]="quantites_ingredient.farine_de_sang" name="farine_de_sang">
+              </ion-input>
+            </ion-item>
+        </div>
+        <ion-item>
+          <ion-button type="submit" color="primary" (click)="compositionManuelle()">Démarrer la composition</ion-button>
+        </ion-item>
+      <!-- </ion-list> -->
+    </div>
+</ion-content>
